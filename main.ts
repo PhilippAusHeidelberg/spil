@@ -1,8 +1,10 @@
 input.onButtonPressed(Button.A, function () {
-    if (true) {
-        game.addScore(1)
+    game.addScore(1)
+    philipp.delete()
+    basic.pause(500)
+    if (philipp.get(LedSpriteProperty.X) == 2) {
+        philipp = game.createSprite(2, 2)
         philipp.delete()
-        basic.pause(1000)
     }
     if (philipp.isDeleted()) {
         philipp = game.createSprite(2, 2)
